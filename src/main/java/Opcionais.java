@@ -1,12 +1,10 @@
     public class Opcionais implements Cloneable {
         private String roda;
-        private String tetoSolar;
+        private boolean tetoSolar;
         private String pneu;
-        private String arCondicionado;
+        private boolean arCondicionado;
 
-
-        public Opcionais(String roda, String tetoSolar, String pneu, String arCondicionado) {
-            super();
+        public Opcionais(String roda, boolean tetoSolar, String pneu, boolean arCondicionado) {
             this.roda = roda;
             this.tetoSolar = tetoSolar;
             this.pneu = pneu;
@@ -22,11 +20,11 @@
             return this;
         }
 
-        public String getTetoSolar() {
+        public boolean getTetoSolar() {
             return tetoSolar;
         }
 
-        public Opcionais setTetoSolar(String tetoSolar) {
+        public Opcionais setTetoSolar(boolean tetoSolar) {
             this.tetoSolar = tetoSolar;
             return this;
         }
@@ -40,11 +38,11 @@
             return this;
         }
 
-        public String getArCondicionado() {
+        public boolean getArCondicionado() {
             return arCondicionado;
         }
 
-        public Opcionais setArCondicionado(String arCondicionado) {
+        public Opcionais setArCondicionado(boolean arCondicionado) {
             this.arCondicionado = arCondicionado;
             return this;
         }

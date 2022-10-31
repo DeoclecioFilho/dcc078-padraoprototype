@@ -1,21 +1,21 @@
     public class Carro implements Cloneable {
-        private int chassi;
+        private String chassi;
         private String modelo;
         private Opcionais opcionais;
-        private String tipo;
+        private String versao;
 
-        public Carro(int chassi, String modelo, Opcionais opacionais, String tipo) {
+        public Carro(String chassi, String modelo, Opcionais opacionais, String versao) {
             this.chassi = chassi;
             this.modelo = modelo;
             this.opcionais = opacionais;
-            this.tipo = tipo;
+            this.versao = versao;
         }
 
-        public int getChassi() {
+        public String getChassi() {
             return chassi;
         }
 
-        public Carro setChassi(int chassi) {
+        public Carro setChassi(String chassi) {
             this.chassi = chassi;
             return this;
         }
@@ -38,29 +38,29 @@
             return this;
         }
 
-        public String getTipo() {
-            return tipo;
+        public String getversao() {
+            return versao;
         }
 
-        public Carro setTipo(String tipo) {
-            this.tipo = tipo;
+        public Carro setversao(String versao) {
+            this.versao = versao;
             return this;
         }
 
         @Override
         public Carro clone() throws CloneNotSupportedException {
-            Carro alunoClone = (Carro) super.clone();
-            alunoClone.opcionais = (Opcionais) alunoClone.opcionais.clone();
-            return alunoClone;
+            Carro carroClone = (Carro) super.clone();
+            carroClone.opcionais = (Opcionais) carroClone.opcionais.clone();
+            return carroClone;
         }
 
         @Override
         public String toString() {
             return "Carro{" +
-                    "chassi=" + chassi +
+                    "chassi='" + chassi + '\'' +
                     ", modelo='" + modelo + '\'' +
-                    ", opacionais=" + opcionais +
-                    ", tipo='" + tipo + '\'' +
+                    ", opcionais=" + opcionais +
+                    ", versao='" + versao + '\'' +
                     '}';
         }
     }
